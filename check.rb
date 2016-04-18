@@ -13,3 +13,19 @@ topics = ["#shippamspaste"]
 streamclient.filter(track: topics.join(",")) do |object|
   puts object.text if object.is_a?(Twitter::Tweet)
 end
+
+
+require 'RMagick'
+
+include Magick
+
+
+
+
+
+	image = ImageList.new("crabs.jpg")
+
+	cat.rotate!(angle)
+	cat.trim!
+
+	cat.write("pics/#{angle}.jpg")

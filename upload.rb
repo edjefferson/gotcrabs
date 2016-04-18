@@ -9,9 +9,21 @@ end
 
 
 
-media_ids = %w(test.mp4).map do |filename|
+
+require 'RMagick'
+
+include Magick
+
+
+
+
+
+image = Image.new("test.png")
+
+
+media_ids = %w(test.png).map do |filename|
   Thread.new do
-    twitter_client.upload(File.new(filename))
+    twitter_client.upload(File.new filename)
   end
 end.map(&:value)
 
