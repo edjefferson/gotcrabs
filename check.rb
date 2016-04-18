@@ -1,6 +1,6 @@
 require 'twitter'
 require 'tempfile'
-require 'RMagick'
+require 'rmagick'
 include Magick
 streamclient = Twitter::Streaming::Client.new do |config|
   config.consumer_key        = ENV["YOUR_CONSUMER_KEY"]
