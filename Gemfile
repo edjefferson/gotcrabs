@@ -3,3 +3,4 @@ ruby '2.3.0'
 
 gem 'twitter'
 gem 'rmagick'
+gem 'tempfile'
