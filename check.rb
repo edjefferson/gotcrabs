@@ -18,6 +18,7 @@ end
 topics = ["#WhatPasteAmI"]
 streamclient.filter(track: topics.join(",")) do |object|
   if object.is_a?(Twitter::Tweet)
+    puts object
     name = object.user.name.split(" ")[0]
     if name == "The"
       name = object.user.name.split(" ")[1]
