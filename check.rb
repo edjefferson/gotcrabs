@@ -19,6 +19,9 @@ topics = ["#WhatPasteAmI"]
 streamclient.filter(track: topics.join(",")) do |object|
   if object.is_a?(Twitter::Tweet)
     name = object.user.name.split(" ")[0]
+    if name == "The"
+      name = object.user.name.split(" ")[1]
+    end
     screen_name = object.user.screen_name
     if screen_name != "ShippamsPaste"
     tweet_id = object.id
