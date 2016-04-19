@@ -62,7 +62,7 @@ streamclient.filter(track: topics.join(",")) do |object|
       end
     end.map(&:value)
 
-    twitter_client.update("@#{screen_name}", :media_ids => media_ids.join(','), :in_reply_to_status_id => tweet_id)
+    twitter_client.update("@#{screen_name} #WhatPasteAmI", :media_ids => media_ids.join(','), :in_reply_to_status_id => tweet_id)
 end
 end
 end
